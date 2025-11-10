@@ -1,0 +1,51 @@
+<div class="status-filter">
+  <label for="cargoStatus">Filter by Cargo Status:</label>
+  <select id="cargoStatus">
+    <option value="">Select Status</option>
+    <option value="In Transit">In Transit</option>
+    <option value="Delayed">Delayed</option>
+    <option value="Pending">Pending</option>
+  </select>
+  <button class="btn" onclick="filterCargos()">Apply</button>
+</div>
+
+<div id="statusResults"></div>
+
+<select id="searchType">
+  <option value="client_id">Client ID</option>
+  <option value="cargo_id">Cargo ID</option>
+  <option value="shipment_id">Shipment ID</option>
+</select>
+<input id="searchInput" type="text" placeholder="Enter ID">
+<button id="searchBtn">Search</button>
+<div id="searchResults"></div>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cargo Management — Dynamic Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cargo Management System</h1>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Tables</h3>
+      <ul id="tableList"></ul>
+    </aside>
+    <main class="main">
+      <div class="toolbar">
+        <button id="reloadBtn">Reload Tables</button>
+        <span id="currentTableLabel"></span>
+      </div>
+      <div id="controls"></div>
+      <div id="tableContainer">Select a table from the left</div>
+    </main>
+  </div>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

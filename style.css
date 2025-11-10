@@ -1,0 +1,291 @@
+/* 🌿 Base Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+.container {
+  display: flex;
+  min-height: 85vh;
+}
+
+header {
+  background: #0b6b35;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* 🧭 Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 12px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #0b6b35;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 8px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar li:hover {
+  background: #eef7ec;
+}
+
+/* 🧩 Main Content */
+.main {
+  flex: 1;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* 🧾 Tables */
+#tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tableContainer th, #tableContainer td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#controls {
+  margin-bottom: 10px;
+}
+
+/* 🧠 Buttons */
+.btn {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #0b6b35;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn:hover {
+  background: #0a5a2d;
+}
+
+.btn.danger {
+  background: #c62828;
+}
+
+/* 🧮 Input Fields */
+input[type="text"], 
+input[type="number"], 
+input[type="datetime-local"] {
+  padding: 6px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 🔔 Message Box */
+.message-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message-box.info { background: #0288d1; }
+.message-box.success { background: #2e7d32; }
+.message-box.error { background: #c62828; }
+
+/* 🔍 Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#searchResult {
+  background: #fff;
+  border-radius: 4px;
+  padding: 6px;
+  margin-top: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}
+
+/* 🧱 Card Design (used in search results) */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 6px !important;
+  overflow: hidden;
+}
+
+.card-header {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f8f9fa;
+  color: #222;
+  padding: 6px 10px !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 6px 10px !important;
+}
+
+/* 🧩 Tables inside cards */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 3px 6px !important;
+  font-size: 13px;
+  line-height: 1.1;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.table th {
+  background: #f1f1f1;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background: #f9f9f9;
+}
+
+/* ⚙️ Reduce extra gaps */
+.card + .card {
+  margin-top: 4px !important;
+}
+
+#searchResults {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* 🔠 Headings inside results */
+h4, h3 {
+  margin-top: 5px !important;
+  margin-bottom: 6px !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  color: #222;
+}
+
+/* 🧍 Utility */
+.table-responsive {
+  overflow-x: auto;
+  margin-bottom: 6px !important;
+}
+
+/* 🚚 Cargo Status Filter Section */
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  background: #ffffff;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.status-filter label {
+  font-weight: 600;
+  color: #0b6b35;
+  font-size: 14px;
+}
+
+.status-filter select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-filter select:hover {
+  background-color: #eef7ec;
+}
+
+.status-filter .btn {
+  padding: 6px 10px;
+  background-color: #0b6b35;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.status-filter .btn:hover {
+  background-color: #0a5a2d;
+}
+
+/* 🎯 Filter Result Table */
+#statusResults {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#statusResults table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#statusResults th, #statusResults td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 13px;
+}
+
+#statusResults th {
+  background: #f3f3f3;
+  font-weight: 600;
+}
+
+#statusResults tr:hover {
+  background-color: #f9f9f9;
+}
